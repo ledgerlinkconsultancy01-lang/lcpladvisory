@@ -11,15 +11,15 @@
             // Maps each logical page id (used throughout the markup, e.g. showPage('about'))
             // to its real, standalone HTML file.
             const PAGE_MAP = {
-                'home': 'index.html',
-                'about': 'about.html',
-                'services': 'services.html',
-                'finance-core': 'finance-core.html',
-                'tax-strategy': 'tax-strategy.html',
-                'tax-defense': 'tax-defense.html',
-                'gallery': 'gallery.html',
-                'faq': 'faq.html',
-                'contact': 'contact.html'
+                'home': '/',
+                'about': '/about',
+                'services': '/services',
+                'finance-core': '/finance-core',
+                'tax-strategy': '/tax-strategy',
+                'tax-defense': '/tax-defense',
+                'gallery': '/gallery',
+                'faq': '/faq',
+                'contact': '/contact'
             };
 
             function showPage(id) {
@@ -31,7 +31,7 @@
                     });
                     return;
                 }
-                const target = PAGE_MAP[id] || (id + '.html');
+                const target = PAGE_MAP[id] || ('/' + id);
                 window.location.href = target;
             }
 
